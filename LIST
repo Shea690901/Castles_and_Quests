@@ -1,0 +1,23 @@
+Following castles and quests can be found on lysator
+(ftp://ftp.lysator.liu.se/pub/lpmud/castles)
+if you have any questions regarding this original code please contact
+pell@lysator.liu.se,
+
+Padrone's and Quantos' castles have been certified to work under the LPmud
+3.0 parser. Note! Only the 3.0 parser, but the old (2.4.5) mudlib.
+All other might work but then again they might not work...
+
+angmar 			Angmar's treasury
+
+kantele			The well-known Kantele's mansion, somewhat
+				debugged. There are probably lots of bugs
+				left. Not for the faint at heart.
+
+morgar			Morgar's tower
+padrone			The famous walking castle of Padrone
+				export version 1.0.5
+
+*** Note: DesertWorld is currently unavailable ***
+quantos			The DesertWorld of Quantos Tanthalon,
+				originally from Avalon. Updated to 2.4.5/3.0
+				and lots of fixes. Contains a 270-room maze.

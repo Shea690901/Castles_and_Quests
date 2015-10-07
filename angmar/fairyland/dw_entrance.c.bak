@@ -1,0 +1,53 @@
+inherit "room/room";
+
+reset(arg) {
+
+  object sign;
+
+  if (!arg){
+    set_light(1);
+    short_desc = "The entrance to Darkwood";
+    no_castle_flag = 0;
+    long_desc = 
+        "You are standing in front of the entrance to Darkwood.\n"
+        + "You cannot see further than a few metres of the path\n"
+        + "that is trailing into the forest.\n";
+    dest_dir = 
+        ({
+        "players/angmar/fairyland/dw_path1", "east",
+        "players/angmar/fairyland/path1", "west",
+        });
+    items = 
+        ({
+        });
+  }
+  if (!present("sign", this_object())){
+    sign = clone_object("obj/treasure");
+    sign->set_id("sign");
+    sign->set_short("A small sign");
+    sign->set_long("A sign made of weatherbeaten oak.  It looks as if it has been here for a while.\n");
+    sign->set_weight(50);
+    sign->set_read("The sign says:\n"+
+		   "   Turn back stranger!  You will find nothing\n" +
+		   "   but death in here!  If you are a mighty\n" +
+		   "   warrior and think that you can free the\n" +
+		   "   town from the horrors in this forest we\n" +
+		   "   will be forever grateful to you, but \n" +
+		   "   remember that you have been warned!\n\n" +
+		   "                            The Villagers\n");
+    sign->set_value(1);
+    move_object(sign, this_object());
+  }
+}
+
+query_light() {
+    return 1;
+}
+
+realm(str)
+{
+  return (str == "fairyland" || str == "darkwood");
+}
+
+query_inorout() { return 2; }
+
